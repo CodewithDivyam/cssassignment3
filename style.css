@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Rakkas", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:linear-gradient( #eda642,#411d04);
+}
+
+header {
+    text-align: center;
+    background-color: #eda642; /* Fallback color */
+    background-image: linear-gradient(#eda642, #411d04); /* Gradient */
+    padding: 20px;
+}
+
+.card{
+    position:relative;
+    width: 320px;
+    height: 459px;
+    background: #fff; 
+    border-radius: 20px;
+    overflow:hidden;
+    box-shadow: 0 15px 35px rgb(87, 31, 2);
+}
+.card .poster{
+    position: relative;
+}
+
+.card .poster::before{
+    content: '';
+    position: absolute;
+    bottom:-180px;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(0deg, #eda642 20%, transparent);
+    transition:0.5s;
+    z-index:1;
+}
+.card:hover .poster::before{
+    bottom:0px;
+}
+
+.card .poster img{
+    width: 350px;   
+    transition: 0.5s;
+}
+footer {
+    background-color: #eda642; /* Fallback color */
+    background-image: linear-gradient(#eda642, #411d04); /* Gradient */
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 100px;
+}
+
+.company-info, .quick-contact {
+    text-align: center;
+}
+
+.quick-contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-contact input, .quick-contact textarea {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.quick-contact button {
+    padding: 5px 10px;
+    background-color: #ffcc00;
+    border: none;
+    color: #411d04 ;
+    cursor: pointer;
+}
+.quick-contact button:hover {
+    background-color: #ffdb4d;
+}
